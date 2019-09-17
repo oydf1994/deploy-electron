@@ -7669,10 +7669,20 @@ shell-escape@^0.2.0:
   resolved "https://registry.npm.taobao.org/shell-escape/download/shell-escape-0.2.0.tgz#68fd025eb0490b4f567a027f0bf22480b5f84133"
   integrity sha1-aP0CXrBJC09WegJ/C/IkgLX4QTM=
 
+shell-exec@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npm.taobao.org/shell-exec/download/shell-exec-1.0.2.tgz#2e9361b0fde1d73f476c4b6671fa17785f696756"
+  integrity sha1-LpNhsP3h1z9HbEtmcfoXeF9pZ1Y=
+
 shell-quote@^1.6.1:
   version "1.7.2"
   resolved "https://registry.npm.taobao.org/shell-quote/download/shell-quote-1.7.2.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fshell-quote%2Fdownload%2Fshell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha1-Z6fQLHbJ2iT5nSCAj8re0ODgS+I=
+
+shell.js@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.npm.taobao.org/shell.js/download/shell.js-3.1.0.tgz#b479ce5b8108dbb591b800bf505765d272097950"
+  integrity sha1-tHnOW4EI27WRuAC/UFdl0nIJeVA=
 
 shelljs@^0.8.3:
   version "0.8.3"

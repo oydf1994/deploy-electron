@@ -19,6 +19,9 @@
       <el-button type="primary" @click="add">添加应用</el-button>
     </div>
     <addApp ref="addApp" @upList="getList"></addApp>
+    <el-dialog title="发布中" :visible.sync="dialogVisible" width="400px" :before-close="$handleClose" top="20px">
+      <div v-for="(item,index) in text" :key="index">{{item}}</div>
+    </el-dialog>
   </div>
 </template>
 
@@ -31,11 +34,17 @@
     data() {
       return {
         list: [],
+        dialogVisible: false,
         start
       }
     },
     components: {
       addApp
+    },
+    computed: {
+      text() {
+        return this.$store.state.Prompt
+      }
     },
     created() {
       this.getList()
@@ -72,8 +81,9 @@
         this.$refs.addApp.open(item)
       },
       deploy(item) {
-        console.log(item)
-        // this.start(item)
+        this.$store.commit("delPrompt")
+        this.dialogVisible = true
+        this.start(item)
       }
     }
   }
