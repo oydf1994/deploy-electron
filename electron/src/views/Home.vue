@@ -27,15 +27,15 @@
 
 <script>
   // @ is an alias to /src
+  const ipc = require('electron').ipcRenderer;
   import addApp from '../components/addApp.vue'
-  import start from './../assets/javascript/start'
   export default {
     name: 'home',
     data() {
       return {
         list: [],
+        ipc,
         dialogVisible: false,
-        start
       }
     },
     components: {
@@ -83,7 +83,8 @@
       deploy(item) {
         this.$store.commit("delPrompt")
         this.dialogVisible = true
-        this.start(item)
+        // this.start(item)
+        ipc.send('deploy', item)
       }
     }
   }

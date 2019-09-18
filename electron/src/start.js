@@ -1,4 +1,4 @@
-import store from '../../store'
+import store from './store'
 var start = async (item) => {
     const fs = require('fs')
     const path = require('path')
@@ -19,23 +19,12 @@ var start = async (item) => {
     // 文件夹位置
     const compileDist = async () => {
         // 进入本地文件夹 执行命令
-        // shell.cd(path.resolve(config.distDir, '../'))
-        // shell.exec(`npm run build`)
-        var exec = require('child_process').exec;
-        var cmdStr = `cd ${path.resolve(config.distDir, '../')}`
-        exec(cmdStr, function (err, stdout, stderr) {
-            if (err) {
-                console.log('get weather api error:' + stderr);
-            } else {
-                /*
-                这个stdout的内容就是上面我curl出来的这个东西：
-                {"weatherinfo":{"city":"北京","cityid":"101010100","temp":"3","WD":"西北风","WS":"3级","SD":"23%","WSE":"3","time":"21:20","isRadar":"1","Radar":"JC_RADAR_AZ9010_JB","njd":"暂无实况","qy":"1019"}}
-                */
-                exec('npm run build', (err, stdout, stderr) => {
-                    console.log(stdout)
-                })
-            }
-        });
+        store.commit("setPrompt", '即将进入目标文件夹')
+        shell.cd(path.resolve(config.distDir, '../'))
+        store.commit("setPrompt", '进入目标文件夹')
+        store.commit("setPrompt", path.resolve(config.distDir, '../'))
+        store.commit("setPrompt", '开始编译')
+        shell.exec(`npm run build`)
         store.commit("setPrompt", '编译完成')
     }
     // ********* 压缩dist 文件夹 *********
