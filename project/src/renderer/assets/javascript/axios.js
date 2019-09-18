@@ -3,8 +3,8 @@ import {
     Message
 } from 'element-ui'
 import VueCookies from 'vue-cookies'
-axios.defaults.baseURL = 'http://127.0.0.1:7003';
-// axios.defaults.baseURL = 'http://electron.east0616.top/';
+// axios.defaults.baseURL = 'http://127.0.0.1:7003';
+axios.defaults.baseURL = 'http://electron.east0616.top/';
 axios.interceptors.request.use(config => {
     if (config.url.indexOf('login') == -1) {
         config.headers.token = JSON.parse(window.localStorage.getItem('user')).token
