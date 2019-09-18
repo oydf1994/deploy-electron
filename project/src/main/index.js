@@ -32,7 +32,7 @@ function createWindow() {
     useContentSize: true,
     width: 1000
   })
-
+  // mainWindow.webContents.openDevTools()
   mainWindow.loadURL(winURL)
 
   mainWindow.on('closed', () => {
@@ -62,7 +62,7 @@ ipcMain.on('message', function (event, item) {
     distDir: path.resolve(item.addressLocal), // 打包文件夹
     distZipPath: path.resolve(item.addressLocal, 'dist.zip') // 打包压缩文件地址,
   }
-  start(config,mainWindow)
+  start(config, mainWindow)
 });
 /**
  * Auto Updater

@@ -4,12 +4,12 @@
       <div class="ms-title">一键部署系统</div>
       <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
         <el-form-item prop="name">
-          <el-input v-model="param.name" placeholder="name">
+          <el-input v-model="param.name" placeholder="请输入用户名">
             <el-button slot="prepend" icon="iconfont iconyonghu"></el-button>
           </el-input>
         </el-form-item>
         <el-form-item prop="pwd">
-          <el-input type="password" placeholder="password" v-model="param.pwd" @keyup.enter.native="submitForm()">
+          <el-input type="password" placeholder="请输入密码" v-model="param.pwd" @keyup.enter.native="submitForm()">
             <el-button slot="prepend" icon="iconfont iconmima"></el-button>
           </el-input>
         </el-form-item>
@@ -27,8 +27,8 @@
     data: function () {
       return {
         param: {
-          name: 'east',
-          pwd: '123456',
+          name: '',
+          pwd: '',
         },
         rules: {
           name: [{
@@ -51,7 +51,8 @@
             this.$api.post('/user/login', this.param).then(res => {
               if (res) {
                 this.$api.success('登陆成功')
-                this.$cookies.set('user', res)
+                // this.$cookies.set('user', res)
+                window.localStorage.setItem('user', JSON.stringify(res))
                 this.$router.push('/home')
               }
             })

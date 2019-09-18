@@ -6,6 +6,7 @@ import App from './App'
 import router from './router'
 import store from './store'
 import VueCookies from 'vue-cookies'
+import './assets/css/style.css'
 Vue.use(VueCookies) //cookie
 Vue.use(ElementUI, {
   size: 'small'

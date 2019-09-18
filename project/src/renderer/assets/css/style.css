@@ -1,0 +1,24 @@
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1418237_5r5dp9c16pm.eot?t=1568701012680'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1418237_5r5dp9c16pm.eot?t=1568701012680#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAANcAAsAAAAAB1AAAAMNAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDBgqCOII7ATYCJAMMCwgABCAFhG0HNxuCBsiehbFjbQlGrFiZd63MEgG1xvbkBdckmhi6TycxJIZEgtAhkiyRunioGoqX8Je6ctfykx84VCnUHZcBZoNkYFl3F8aiYZ4+0wNQ0QHWaYAAGL4t2Zn6y4jDcQsokPmW5TLH5KgLMA4ooLE2pQkVSEDeB2zofg4T0GpSDm5Nm7MEmmXmqIBw6No6NGcMckN5UAvKioUZwrkGdTwUHwM4C74f/qFSM4iKBGb29sFUCyZ8WR0mk53NTliTdgHhdDbwy0hYAjJhrzKxiwg8lWhVqM35pSyIU4X/NwQCTVVu9I8XCSWYpe1gDpORrwkOm8DX5EUiSKD0GKl94Ioo/W9O4khL17C2LRq+fbvs9esloL28psq516md994NJ+ffInz3bvmbN0shOLm188gtKMc3WsfhO8yevVve3vbmzVwvtLMjN7oJYufbt1ziVXPVC8u71SESxTEijPDIJQo5RJ8xc+DWgTNmbShtcPnRhJkqSlxsOPNxAZoODJONe0Zg0AbB4AednVtmj6/CtFg/bZ2kCsfFDWH6ao2lpSOPcU9vfWS9hxy7vntUsbhkIMdyHXHP6eMP/bgojBYjcakKF+HiMFysIBe7wwaAZgc5nnYFqevkQlr2W37jeceyX+s7x/yrW1WAz8snlqC/2aFCd5P6pJ2BnyDsWJc1NUaZFYEjMFzJ8g3ZIsgT3BowPb2+DlcNdC4lqA0kiCoTSGpThExZQqHNCkq1VbRaNH15mz4CEXILsGAfIOh2B1GneyTdnhAy5QsKg76h1B1Bq53Qu2GbmVxtsmC6ZBY1NlHXjCNum6UWli9idjXQRVoc0JYxkblhWi6U8unpLGJiiilZza5IySkXcUinwXEsCGKaiNhjpiw4UiajikVe9aKCGYeg2SQwOomxUIZNKJcpFuFec0krfH4RxlYV0ImGmirnMoyQcdunygpKHQjTFVGnmlt5JlNjq5AkjuKEWIiaBjYmsBIxKqnu52FMUoEzIJYYpUiNeFdFYXlV+H5boJW5YwoKElQhH7mh3rgpjmynCgAAAAA=') format('woff2'),
+  url('//at.alicdn.com/t/font_1418237_5r5dp9c16pm.woff?t=1568701012680') format('woff'),
+  url('//at.alicdn.com/t/font_1418237_5r5dp9c16pm.ttf?t=1568701012680') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1418237_5r5dp9c16pm.svg?t=1568701012680#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconmima:before {
+  content: "\e640";
+}
+
+.iconyonghu:before {
+  content: "\e643";
+}

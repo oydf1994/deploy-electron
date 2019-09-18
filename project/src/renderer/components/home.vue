@@ -17,6 +17,7 @@
         </el-row>
         <div class="add">
             <el-button type="primary" @click="add">添加应用</el-button>
+            <el-button type="primary" @click="$router.push('/')">退出登录</el-button>
         </div>
         <addApp ref="addApp" @upList="getList"></addApp>
         <el-dialog title="发布中" :visible.sync="dialogVisible" width="400px" :before-close="$handleClose" top="10px"

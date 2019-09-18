@@ -74,13 +74,16 @@
                     if (valid) {
                         this.$api.post('/item/add', this.form).then(res => {
                             this.dialogVisible = false
+                            this.$api.success('操作成功')
                             this.$emit('upList')
                         })
                     }
                 })
             },
             open(item) {
-                this.form = item
+                this.form = {
+                    ...item
+                }
                 this.dialogVisible = true
             }
         },

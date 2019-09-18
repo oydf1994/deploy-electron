@@ -15,6 +15,11 @@ module.exports = appInfo => {
     // convert: false,
     // validateRoot: false,
   };
+  config.cluster = {
+    listen: {
+      port: 7003,
+    }
+};
   config.security = {
     csrf: {
       enable: false,

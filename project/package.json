@@ -17,8 +17,8 @@
     "postinstall": ""
   },
   "build": {
-    "productName": "project",
-    "appId": "com.example.yourapp",
+    "productName": "一键部署",
+    "appId": "east",
     "directories": {
       "output": "build"
     },
@@ -26,8 +26,7 @@
       "dist/electron/**/*"
     ],
     "dmg": {
-      "contents": [
-        {
+      "contents": [{
           "x": 410,
           "y": 150,
           "type": "link",
