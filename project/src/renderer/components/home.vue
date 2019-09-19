@@ -128,7 +128,7 @@
         overflow-y: auto;
         background: rgba(0, 0, 0, .3);
         color: #582424;
-        padding: 10px;
+        padding: 20px;
     }
 
     .home>>>.el-dialog__header {
@@ -137,5 +137,8 @@
 
     .home>>>.el-dialog__body {
         padding: 10px;
+    }
+    .el-col{
+        margin-bottom: 10px;
     }
 </style>
