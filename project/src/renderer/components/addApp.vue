@@ -9,7 +9,7 @@
                 <el-form-item label="服务器地址" prop="location" :rules="required">
                     <el-input v-model="form.location"></el-input>
                 </el-form-item>
-                <el-form-item label="服务器账号" prop="password" :rules="required">
+                <el-form-item label="服务器账号" prop="ssh" :rules="required">
                     <el-input v-model="form.ssh"></el-input>
                 </el-form-item>
                 <el-form-item label="服务器密码" prop="password" :rules="required">
