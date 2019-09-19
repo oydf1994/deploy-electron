@@ -17,7 +17,7 @@
         </el-row>
         <div class="add">
             <el-button type="primary" @click="add">添加应用</el-button>
-            <el-button type="primary" @click="$router.push('/')">退出登录</el-button>
+            <el-button type="primary" @click="logout">退出登录</el-button>
         </div>
         <addApp ref="addApp" @upList="getList"></addApp>
         <el-dialog title="发布中" :visible.sync="dialogVisible" width="400px" :before-close="$handleClose" top="10px"
@@ -63,6 +63,10 @@
             this.getList()
         },
         methods: {
+            logout() {
+                window.localStorage.setItem('user', null)
+                this.$router.push('/')
+            },
             add() {
                 this.$refs.addApp.open({})
             },
@@ -138,7 +142,8 @@
     .home>>>.el-dialog__body {
         padding: 10px;
     }
-    .el-col{
+
+    .el-col {
         margin-bottom: 10px;
     }
 </style>

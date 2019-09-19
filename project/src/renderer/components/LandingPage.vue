@@ -44,6 +44,18 @@
         },
       };
     },
+    created() {
+      var item = JSON.parse(window.localStorage.getItem('user'))
+      if (item) {
+        this.$api.post('/user/login', {
+          name: item.name,
+          pwd: item.pwd
+        }).then(res => {
+          window.localStorage.setItem('user', JSON.stringify(res))
+          this.$router.push('/home')
+        })
+      }
+    },
     methods: {
       submitForm() {
         this.$refs.login.validate(valid => {

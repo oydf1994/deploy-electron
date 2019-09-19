@@ -13,7 +13,7 @@
                     <el-input v-model="form.ssh"></el-input>
                 </el-form-item>
                 <el-form-item label="服务器密码" prop="password" :rules="required">
-                    <el-input v-model="form.password"></el-input>
+                    <el-input v-model="form.password" type="password"></el-input>
                 </el-form-item>
                 <el-form-item label="服务器部署地址" prop="addressServer" :rules="required">
                     <el-input v-model="form.addressServer"></el-input>
