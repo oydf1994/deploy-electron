@@ -54,6 +54,7 @@
         },
         created() {
             ipcRenderer.on('msg', (event, arg) => {
+                console.log(arg)
                 arg.trim().split('\n').forEach((v, i) => {
                     this.textList.push(v)
                 })

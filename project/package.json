@@ -1,6 +1,6 @@
 {
   "name": "project",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "east <573027166@qq.com>",
   "description": "An electron-vue project",
   "license": "null",
@@ -51,9 +51,11 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "bluebird": "^3.5.5",
     "element-ui": "^2.12.0",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
+    "node-cmd": "^3.0.0",
     "node-ssh": "^6.0.0",
     "shelljs": "^0.8.3",
     "vue": "^2.5.16",

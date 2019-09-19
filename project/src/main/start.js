@@ -4,16 +4,40 @@ const zipper = require('zip-local')
 const shell = require('shelljs')
 const node_ssh = require('node-ssh')
 let SSH = new node_ssh()
+const Promise = require('bluebird')
+// const exec = require('child_process').exec
+// 子进程名称
+const cmd = require('node-cmd')
+const util = require('util');
+const exec = util.promisify(require('child_process').exec);
+const getAsync = Promise.promisify(cmd.get, { multiArgs: true, context: cmd })
 shell.config.execPath = path.join('C:', 'Program Files', 'nodejs', 'node.exe')
-var start = (item, mainWindow) => {
+var start = async (item, mainWindow) => {
+    let workerProcess = null
     let config = item
+    // 任何你期望执行的cmd命令，ls都可以
+    let cmdStr = 'npm run build'
+    // 执行cmd命令的目录，如果使用cd xx && 上面的命令，这种将会无法正常退出子进程
+    let cmdPath = path.resolve(config.distDir, '../')
     // 文件夹位置
     const compileDist = async () => {
         // 进入本地文件夹 执行命令
         mainWindow.webContents.send('msg', '开始编译')
-        shell.cd(path.resolve(config.distDir, '../'))
-        shell.exec(`npm run build`)
-        mainWindow.webContents.send('msg', '编译完成')
+        try {
+            mainWindow.webContents.send('msg', '进入指定文件夹')
+            mainWindow.webContents.send('msg', '开始打包,此过程可能需要几分钟')
+            const { stdout, stderr } = await exec(cmdStr, { cwd: cmdPath });
+            console.log(stdout)
+            console.log(stderr)
+            // let build = await getAsync(`cd ${path.resolve(config.distDir, '../')} & npm run build`)
+            // shell.cd(path.resolve(config.distDir, '../'))
+            // shell.exec(`npm run build`)
+            mainWindow.webContents.send('msg', stdout)
+            mainWindow.webContents.send('msg', '编译完成')
+        } catch (e) {
+            mainWindow.webContents.send('msg', e)
+        }
+
     }
     // ********* 压缩dist 文件夹 *********
     const zipDist = async () => {
